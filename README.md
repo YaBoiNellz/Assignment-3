@@ -1,32 +1,76 @@
-# grid-maker-starter-code
-This repository is the starter code for Assignment 3 - Grid Maker.
+Name:Darnell Chambers Gordon
+GitHub Username: YaBoiNellz
+GitHub Repository Link: https://github.com/YaBoiNellz/Assignment-3.git
+Group Members: None
 
-### Live Link
-[Website link](https://johnnylaicode.github.io/grid-maker-starter-code/)
+Assignment 3: Grid Maker Process
+I solved the assignment by implementing all the provided functions
+and adding an extra function 'changeColor()' that changes the cell
+color when clicked.
 
-----------
-### 1. Use the following process to ***import*** the Assignment 3 starter code repository to your GitHub account as the starter codebase
-1.	Log on to GitHub
-2.	Click on the + sign in the top right corner (next to the user icon)
-3.	In the dropdown menu, select "Import repository"
-4.	A new page will open
-5.	In "Your old repository’s clone URL" field, enter: `https://github.com/johnnylaicode/grid-maker-starter-code`
-6.	In "Your new repository details" field, enter your own repository name (e.g., "assignment-3")
-7.	Click on the "Begin import" button to start the process
-8.	After the process completed, your new "assignment-3" repository is created – as a completely independent codebase
-9.	From this point on, you can clone your new repository, make changes, create feature branches, and create/merge pull requests
+HOW THE FUNCTIONS WORK
+1. addR()
 
-----------
-### 2. Use the information below to ***clone*** the starter codebase to your local machine
-After creating the starter codebase "assignment-3" repository on GitHub (see above), you can clone it to your local machine. The instructions on how to clone a GitHub repository are available at this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+The add row function adds a row to the table
 
-----------
-### 3. Set up and deploy the application to GitHub Pages
-After your application development, you can deploy the application to GitHub Pages using the process below.
+This function begins by getting the grid element using the getElementByID() method.
+Next, a tr element is created that will be the new row. The function loops through the 
+number of columns and adds the td elements to the newly created row.
+Finally, we add the newly created table row element and increment the number of rows.
 
-#### 1. Create your GitHub Pages home website
-Before deploying a application to GitHub Pages, you need to first create your GitHub Pages home website `https://[your GitHub username].github.io`
-The instructions on how to create your GitHub Pages home website are available at this [link](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
+2. addC()
 
-#### 2. Deploy the application to GitHub Pages
-Follow the instructions at this [link](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) to deploy your application to GitHub Pages.
+Adds a new column to the grid
+
+Similar to the add row function, this method first gets the grid element.
+Once the grid element has been declared, the function loop over the rows and for
+each row, a td element is added.
+
+Finally, after the td has been added to all rows, the function increments the number of columns. 
+
+3. removeR()
+
+Removes a row from the grid
+
+This function gets the table via getElementByID(). Once the table has been defined, the 
+function removes the last tr using the remove() method.
+
+Finally, the number of rows is decremented.
+
+4. removeC()
+
+Removes a column from the table
+
+This method loops through all the rows of the table. For each row, it removes
+the last td element. If the row remains empty after removing all the td elements, the 
+tbody innerHTML is set to empty, otherwise, the number of columns is decremented.
+
+5. fillU()
+
+Fills all the uncolored cells
+
+This method works by getting all the td cells using the document.getElementByTagName() function.
+Once all the td cells have been, the function loops through each and checks if the 
+background color has been set. If the color has not been set, the loop sets it.
+
+6. fillAll()
+
+Fills all the cells
+
+This method works by getting all the td cells using the document.getElementByTagName() function.
+Once all the td cells have been, the function loops through each and sets the background color to the selected
+color.
+
+7. clearAll()
+
+Clears the color of all the cells
+
+This method works by getting all the td cells using the document.getElementByTagName() function.
+Once all the td cells have been, the function loops through each and sets the background color to transparent.
+
+8. changeColor(e)
+
+Changes the color of the clicked cell
+
+This function is triggered by the onclick event and it sets the color of the cell to The
+selected color

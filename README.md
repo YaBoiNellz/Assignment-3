@@ -1,9 +1,12 @@
 Name:Darnell Chambers Gordon
+
 GitHub Username: YaBoiNellz
+
 GitHub Repository Link: https://github.com/YaBoiNellz/Assignment-3.git
+
 Group Members: None
 
-Assignment 3: Grid Maker Process
+Assignment 3: Grid Maker Process for Solving Problem
 I solved the assignment by implementing all the provided functions
 and adding an extra function 'changeColor()' that changes the cell
 color when clicked.
